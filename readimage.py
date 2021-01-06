@@ -5,6 +5,7 @@ import cv2
 # cv2.imread(Path)
 img = cv2.imread("res/face.jpg")
 
+
 # CV2 method is imshow to show image.
 # it is required two parameter.
 
