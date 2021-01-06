@@ -6,6 +6,7 @@ To Learn Open CV with easy way
 * [Required Library](#required-library)
 * [Read Image](#read-image)
 * [Read Video](#read-video)
+* [Read WebCam](#read-webcam)
 
 ## Setup
 * Install Python ( Install below version of latest version )
@@ -45,5 +46,20 @@ while True:
     if success:
         cv2.imshow("Video",img) 
         if cv2.waitKey(0) & 0xFF == ord('q'):
+            break
+```
+
+## Read WebCam
+
+```
+cap = cv2.VideoCapture(0)
+cap.set(3,640) # Width
+cap.set(4,480) # Height
+cap.set(10,80) # increase the brightness level level between 0 to 100
+while True:
+    success, img = cap.read()
+    if success:
+        cv2.imshow("Video",img) # show image
+        if cv2.waitKey(1) & 0xFF == ord('q'):
             break
 ```
