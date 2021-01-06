@@ -7,6 +7,7 @@ To Learn Open CV with easy way
 * [Read Image](#read-image)
 * [Read Video](#read-video)
 * [Read WebCam](#read-webcam)
+* [Require Basic Function](#require-basic-function)
 
 ## Setup
 * Install Python ( Install below version of latest version )
@@ -27,6 +28,9 @@ To Learn Open CV with easy way
 
 The image will appear until you close the program
 
+* File: readimage.py
+
+
 ```
 import cv2
 img = cv2.imread("res/face.jpg")
@@ -37,6 +41,8 @@ cv2.waitKey(0)
 ## Read Video
 
 The video will appear until you close the program or press q
+
+* File: readvideo.py
 
 ```
 import cv2
@@ -51,6 +57,9 @@ while True:
 
 ## Read WebCam
 
+* File: readwebcam.py
+
+
 ```
 import cv2
 cap = cv2.VideoCapture(0)
@@ -63,4 +72,35 @@ while True:
         cv2.imshow("Video",img) # show image
         if cv2.waitKey(1) & 0xFF == ord('q'):
             break
+```
+
+## Require Basic Function
+
+This function is need in OpenCV Developement.
+
+* File: basicfunction.py
+
+```
+import cv2
+import numpy as np
+
+kernel = np.ones((5,5),np.uint8)
+img = cv2.imread("res/face.jpg")
+
+imgGray = cv2.cvtColor(img,cv2.COLOR_BGR2GRAY)
+cv2.imshow("Gray Image", imgGray)
+
+imgBlur = cv2.GaussianBlur(imgGray,(7,7),0)
+cv2.imshow("Blur Image", imgBlur)
+
+imgCanny = cv2.Canny(img,150,200)
+cv2.imshow("Canny Image", imgCanny)
+
+imgDialation = cv2.dilate(imgCanny,kernel,iterations=1)
+cv2.imshow("Dialation Image",imgDialation)
+
+imgEroded = cv2.erode(imgDialation,kernel,iterations=1)
+cv2.imshow("Eroded Image",imgEroded)
+
+cv2.waitKey(0)
 ```
