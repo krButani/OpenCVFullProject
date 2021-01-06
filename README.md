@@ -1,10 +1,10 @@
-# OpenCVFullProject
+# Open CV Full Project
 To Learn Open CV with easy way
 
 ## Table of contents
 * [Setup](#setup)
-* [Required Library](#required-lib)
-* [Read Image](#read-img)
+* [Required Library](#requiredlib)
+* [Read Image](#readimg)
 
 ## Setup
 * Install Python ( Install below version of latest version )
@@ -30,5 +30,4 @@ import cv2
 img = cv2.imread("res/face.jpg")
 cv2.imshow("Output",img)
 cv2.waitKey(0) 
-
 ```
