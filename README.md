@@ -3,9 +3,9 @@ To Learn Open CV with easy way
 
 ## Table of contents
 * [Setup](#setup)
-* [Required Library](#requiredlib)
-* [Read Image](#readimg)
-* [Read Video](#readvideo)
+* [Required Library](#required-library)
+* [Read Image](#read-image)
+* [Read Video](#read-video)
 
 ## Setup
 * Install Python ( Install below version of latest version )
