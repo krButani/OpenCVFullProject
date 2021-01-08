@@ -1,4 +1,4 @@
-# Open CV Full Project
+# Learn Open CV Using Python
 To Learn Open CV with easy way
 
 ## Table of contents
@@ -9,6 +9,7 @@ To Learn Open CV with easy way
 * [Read WebCam](#read-webcam)
 * [Require Basic Function](#require-basic-function)
 * [Resize and Crop Image](#resize-and-crop-image)
+* [Draw Shape and Text](#draw-shape-and-text)
 
 ## Setup
 * Install Python ( Install below version of latest version )
@@ -123,5 +124,28 @@ imgCroped = img[300:600,300:1000]
 cv2.imshow("Image", img)
 cv2.imshow("Resize Image", imgResize)
 cv2.imshow("Croped Image", imgCroped)
+cv2.waitKey(0)
+```
+
+## Draw Shape and Text
+
+* File: drawshapeandtext.py
+
+```
+import cv2
+import numpy as np
+
+imp = np.zeros((512,512,3),np.uint8)
+print(imp.shape)
+
+imp[:] = 255,255,255
+# imp[200:300,100:300] = 0,255,0
+
+cv2.line(imp,(0,0),(imp.shape[1],imp.shape[0]),(0,0,0),5)
+cv2.rectangle(imp,(0,0),(250,350),(0,0,255),cv2.FILLED)
+cv2.circle(imp,(400,200),100,(0,0,255),2)
+cv2.putText(imp,"Hello World!",(000,400),cv2.FONT_HERSHEY_SIMPLEX,2,(255,0,0))
+
+cv2.imshow("Show Image", imp)
 cv2.waitKey(0)
 ```
