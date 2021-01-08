@@ -2,6 +2,7 @@ import cv2
 import numpy as np
 
 # here zero means blank
+
 # inside it pass dimension first is height and width
 # third argument is color RGB or Gray
 imp = np.zeros((512,512,3),np.uint8)

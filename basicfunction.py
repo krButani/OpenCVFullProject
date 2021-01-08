@@ -4,6 +4,7 @@ import numpy as np
 # here define matrix object it is used to Dialate function
 # numpy ones function create random metrix 5x5. so, first argument is (5,5) metrix size
 # and second argument is which type of metrix you need like integer float.
+
 kernel = np.ones((5,5),np.uint8)
 img = cv2.imread("res/face.jpg")
 

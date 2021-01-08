@@ -2,6 +2,7 @@ import cv2
 
 
 # CV2 Method is imread to read image. it require parameter is path of image
+
 # cv2.imread(Path)
 img = cv2.imread("res/face.jpg")
 

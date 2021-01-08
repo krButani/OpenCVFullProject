@@ -5,6 +5,7 @@ img = cv2.imread("res/face.jpg")
 print(img.shape) # its return 3 Value first width , seocnd height, third Type of image Like RGB, GRAY
 
 # Here resize function is resize image
+
 # its take 2 parameter first is image object
 # second is dimension first width and second height
 imgResize = cv2.resize(img,(300,400))

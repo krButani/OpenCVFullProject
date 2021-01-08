@@ -1,6 +1,5 @@
 import cv2
 
-
 # Read Video one by one frame ( Image ) using python
 
 # CV2 method videoCapture is required one parameter.

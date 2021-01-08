@@ -2,6 +2,7 @@
 To Learn Open CV with easy way
 
 ## Table of contents
+
 * [Setup](#setup)
 * [Required Library](#required-library)
 * [Read Image](#read-image)
