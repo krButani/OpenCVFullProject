@@ -8,6 +8,7 @@ To Learn Open CV with easy way
 * [Read Video](#read-video)
 * [Read WebCam](#read-webcam)
 * [Require Basic Function](#require-basic-function)
+* [Resize and Crop Image](#resize-and-crop-image)
 
 ## Setup
 * Install Python ( Install below version of latest version )
@@ -102,5 +103,25 @@ cv2.imshow("Dialation Image",imgDialation)
 imgEroded = cv2.erode(imgDialation,kernel,iterations=1)
 cv2.imshow("Eroded Image",imgEroded)
 
+cv2.waitKey(0)
+```
+
+## Resize and Crop Image
+
+* File: imageresizeorcrop.py
+
+```
+import cv2
+import numpy as np
+
+img = cv2.imread("res/face.jpg")
+print(img.shape) # its return 3 Value first width , seocnd height, third Type of image Like RGB, GRAY
+
+imgResize = cv2.resize(img,(300,400))
+imgCroped = img[300:600,300:1000]
+
+cv2.imshow("Image", img)
+cv2.imshow("Resize Image", imgResize)
+cv2.imshow("Croped Image", imgCroped)
 cv2.waitKey(0)
 ```
